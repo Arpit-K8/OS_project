@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>page for the stimulation </title>
+ <link rel="stylesheet" href="metrics.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head> 
+<body>
+
+
+ <div class="container ">
+
+ <h2 class="heading">Page replacement Agorithm Simulator</h2>
+
+ <form id="inputForm">
+
+     <label for="frames">Number of Frames:</label>
+     <input type="number" id="frames" min="1" required>
+
+     <label for="refenceString">Reference String (comma-seperate): </label>
+     <input type="text" id="referenceString" required>
+
+     <label for="algorithm">Choose Algorithm:</label>
+     <select id="algorithm">
+      
+         <option value="FIFO">FIFO</option>
+         <option value="LRU">LRU</option>
+         <option value="Optimal">Optimal</option>
+         <option value="Hybrid">Hybrid</option>
+     </select>
+
+     <button type="submit" onclick="changeSetting()">Run Simulation</button>
+
+ </form>
+
+ <h3 class="h3">Memory Frames</h3>
+ <div id="framesContainer" ></div>
+
+ <h3 class="h3">Performance Metrices</h3>
+ <p id="pageFaults"></p>
+ <p id="hitRatio"></p>
+
+ </div>
+
+ 
+ <script>     
+     function changeSetting(){
+         document.querySelector(".container").classList.add("stimulus","neon-gradient-box");
+        document.querySelector(".h3").classList.add("change");
+        document.querySelector("#pageFaults").classList.add("change");
+        document.querySelector("#framesContainer").classList.add("framesCon");
+     }
+ </script>
+
+
+ <script src="script.js"></script>
+ 
+ 
+</body>
+</html> 
