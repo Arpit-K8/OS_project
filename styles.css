@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+ body{
+    background-image: url("one.jpg"); 
+    background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    position:relative;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: medium;
+} 
+
+/* nav styles starts from here */
+
+.navbar{
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:10px;
+    
+  
+    /* background-color:gray;
+    opacity:0.9;
+    border-radius: 10px; */
+    
+} 
+
+.head{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 25px;
+    /* background-color:gray ; */
+    border-radius: 10px;
+    padding:10px;
+
+}
+
+.page{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.replace{
+    font-size: 30px;
+}
+
+
+
+.headlist ul{
+    display: flex;
+  margin-right:100px;
+    gap:50px;
+    list-style: none;
+    
+}
+
+.headlist ul li a{
+color:white;
+text-decoration: none;
+}
+
+.headlist ul li{
+    font-size: x-large;
+}
+
+
+.headlist ul li:hover{
+    text-decoration: underline;
+    cursor:pointer;
+    transform:scale(1.2) translateY(20%) ;
+    opacity:0.9;
+    transition-property: text-decoration , transform , opacity;
+    transition-duration: 0.5s;
+    /* transition-delay: 1s; */
+}
+
+/* header  styles*/ 
+/* .header{
+    display: flex;
+    color:white;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:50%;
+    left:50%;
+
+} */
+    /* position:relative; */
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index:1;
+    }
+
+    
+    
+
+
+.one{
+    font-size:large;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom:10px;
+    /* transform:scaleX(-50%); */
+    /* transition-property: transform;
+    transition-duration: 2s;
+     */
+
+     animation: one 2s ease-in-out;
+    
+}
+
+
+@keyframes one{
+    from{
+        transform: translateX(-50%) scaleX(1.2);
+        
+    }
+
+    to{
+        /* transform: scaleX(1); */
+    }
+}
+
+.two{
+    font-size: xx-large;
+    font-weight: 700;
+    margin-right:50px;
+    /* object-fit: cover; */
+    text-align: center;
+    margin-bottom: 10px;
+    animation: two 2s ease-in-out 1s;
+}
+
+@keyframes two {
+
+    from{
+        transform: translateX(-50%) scaleX(1.2);
+    }
+
+    to{
+        /* transform: scaleX(1.2); */
+       
+    }
+
+    
+}
+
+.three{
+    font-size: x-large;
+    text-align: center;
+    animation: two 2s ease-in-out 2s;
+    
+
+}
+
+
+/* button styles */
+/* .btn{
+   position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:50%;
+    top:50%;
+    
+
+} */
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    position: absolute;
+    top: calc(50% + 100px);
+     /* Adjust this for desired spacing */
+    left: 48%;
+    transform: translateX(-50%);
+    top: 50%;
+    
+}
+
+/* @media(max-width ) */
+
+.btn a{
+    text-decoration: none;
+    color:white;
+    padding:10px;
+
+}
+
+
+.btn button{
+    padding:10px;
+    background-color: aquamarine;
+    color:white;
+    font-weight: 400;
+    font-size: large ;
+    border-radius: 30px;
+    margin-left: 80px;
+    border: none;
+
+    
+}
+
+.btn button:hover{
+    transform: scale(1.2) translateY(10%);
+    opacity:0.9;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    
+    cursor:pointer;
+    transition-property: transform , opacity ,border-top-right-radius, border-bottom-left-radius;
+    transition-duration: 1s;
+}
+
+/* .transition{
+    transform: translateY(2);
+    transition: transform 2s;
+} */
+
+
+
+ .neon-gradient-box {
+    font-size: 1rem;
+    color: #fff;
+    padding: 40px 80px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #a60734, #00ffff, #a60734);
+    background-size: 300% 300%;
+    animation: gradientAnimation 3s infinite ease-in-out;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  
+  } 
+
+
+
