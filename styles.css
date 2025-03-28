@@ -82,18 +82,7 @@ text-decoration: none;
     /* transition-delay: 1s; */
 }
 
-/* header  styles*/ 
-/* .header{
-    display: flex;
-    color:white;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top:50%;
-    left:50%;
 
-} */
-    /* position:relative; */
 
     .header {
         display: flex;
@@ -172,17 +161,7 @@ text-decoration: none;
 }
 
 
-/* button styles */
-/* .btn{
-   position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left:50%;
-    top:50%;
-    
 
-} */
 
 
 .btn {
@@ -232,10 +211,7 @@ text-decoration: none;
     transition-duration: 1s;
 }
 
-/* .transition{
-    transform: translateY(2);
-    transition: transform 2s;
-} */
+
 
 
 
