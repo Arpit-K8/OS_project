@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>page for the stimulation </title>
+ <title>Simulation</title>
  <link rel="stylesheet" href="metrics.css">
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,15 @@
 
  </form>
 
+ <!-- AI Suggestion Section -->
+ <div id="aiSuggestion" class="ai-suggestion">
+    <h3>AI Algorithm Suggestion</h3>
+    <div id="suggestionContent">
+        <p>Enter a reference string to get AI-powered algorithm suggestions.</p>
+    </div>
+    <button id="getSuggestion" onclick="getAISuggestion()">Get AI Suggestion</button>
+ </div>
+
  <h3 class="h3">Memory Frames</h3>
  <div id="framesContainer" ></div>
 
@@ -56,7 +65,7 @@
      }
  </script>
 
-
+ <script src="aiModel.js"></script>
  <script src="script.js"></script>
  
  
