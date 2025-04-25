@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding:0;
+    box-sizing: border-box;
 }  
 
 body{
@@ -8,28 +9,27 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
-    height:100vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-family: "Poppins",sans-serif;
     font-style: bold;
     font-weight: 400;
-
+    padding: 20px;
+    overflow-x: hidden;
 }
 
 .container{
     background-color: white;
-    /* background: transparent; */
-    padding: 20px 38px;
-    max-width: 500px;
-    width:100%;
-    border-radius:10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
     box-shadow: 5px 15px 15px gray;
-    /* backdrop-filter: blur(20px); */
-    /* box-sizing: border-box; */
-
-  
+    margin: 20px 0;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
 }
 .heading{
     text-align: center;
@@ -90,8 +90,6 @@ button:hover{
 }
 
 h3{
-    margin-top: 15px;
-    margin-bottom:10px;
     font-weight: 500;
 }
 
@@ -104,9 +102,8 @@ h3{
     padding: 10px;
     overflow-y: auto;
     border: 1px solid #ccc;
-
     border-radius: 12px;
-    
+    max-height: 300px;
 }
 
 .framesCon{
@@ -143,7 +140,6 @@ h3{
 .hit {
     background-color: lightgreen;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
-    /* border:none; */
 }
 
 .fault {
@@ -167,9 +163,6 @@ h3{
     color: #333;
     margin-top: 10px;
 }
-
-
-
   .change{
     color:white;
   }
@@ -201,11 +194,12 @@ h3{
 .stimulus #inputForm,
 .stimulus .h3,
 .stimulus #pageFaults,
-.stimulus #hitRatio {
+.stimulus #hitRatio,
+.stimulus .ai-suggestion {
     position: relative;
     z-index: 2;
-    color: #333; /* Keep original color or adjust as needed */
-    opacity: 0.3; /* Make them semi-transparent */
+    color: #333;
+    opacity: 0.3;
     transition: all 0.3s ease;
 }
 
@@ -215,4 +209,107 @@ h3{
 .stimulus #hitRatio {
     opacity: 1;
     backdrop-filter: none;
+}
+
+.stimulus .ai-suggestion {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+}
+
+.stimulus .ai-suggestion h3,
+.stimulus .ai-suggestion #suggestionContent,
+.stimulus .ai-suggestion #getSuggestion {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.ai-suggestion {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ai-suggestion h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#suggestionContent {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+.suggestion-result {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.suggestion-result p {
+    margin: 8px 0;
+    color: #2c3e50;
+}
+
+#getSuggestion {
+    /* background: linear-gradient(45deg, #3498db, #2980b9);
+     */
+     background: linear-gradient(45deg, #003366, #00ffff, #003366);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    background-size: 300% 300%;
+    animation: gradientAnimation 3s infinite ease-in-out;
+    }
+
+@keyframes gradientAnimation {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+
+}
+
+#getSuggestion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .heading {
+        font-size: 1.5rem;
+    }
+    
+    label {
+        font-size: 1rem;
+    }
+    
+    input, select, button {
+        padding: 10px;
+    }
+    
+    .frame {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
 }
